@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://cfbsskjiav2c7"]
+[gd_scene load_steps=8 format=4 uid="uid://cfbsskjiav2c7"]
 
 [ext_resource type="Texture2D" uid="uid://elg43t5fgd7c" path="res://MANA_SEED/19.07a - Gentle Forest 3.0a ($0 palettes)/gentle sheets/gentle forest v01.png" id="1_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://b05dbjgli8hjd" path="res://player.tscn" id="2_tlwt5"]
+[ext_resource type="Script" uid="uid://eqaxldwhybdf" path="res://npc_1_dialogue.gd" id="3_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://c2x75ink6o6ex" path="res://npc.tscn" id="3_tlwt5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
@@ -291,6 +292,9 @@ texture = ExtResource("1_fj7yv")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_aqk2v")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_036b0"]
+size = Vector2(47.5, 49.5)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -299,9 +303,19 @@ tile_set = SubResource("TileSet_036b0")
 
 [node name="NPC-1" parent="." instance=ExtResource("3_tlwt5")]
 position = Vector2(85, -75)
+script = ExtResource("3_aqk2v")
+
+[node name="DialogueArea_Area2D" type="Area2D" parent="NPC-1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC-1/DialogueArea_Area2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_036b0")
 
 [node name="Player" parent="." instance=ExtResource("2_tlwt5")]
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(2, 0)
 zoom = Vector2(3, 3)
+
+[connection signal="body_entered" from="NPC-1/DialogueArea_Area2D" to="NPC-1" method="_on_dialogue_area_area_2d_body_entered"]
+[connection signal="body_exited" from="NPC-1/DialogueArea_Area2D" to="NPC-1" method="_on_dialogue_area_area_2d_body_exited"]
