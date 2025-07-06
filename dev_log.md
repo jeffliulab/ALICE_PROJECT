@@ -1,4 +1,4 @@
-# Development Log (Diary)
+# Development Log (Diary, Descending)
 
 ## V1.0 MVP DEMO
 
@@ -6,7 +6,7 @@
 
 Learn how to create conversations.
 
-Choose Llama 3 8B Instruct as the first stage's "brain" of residents. (Residents means the people live in the underworld)
+Use Ollama and download `llama3.1:8b-instruct-q4_K_M` as the demo's inference model.
 
 ### June 6, 2025
 
