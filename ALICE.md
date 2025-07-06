@@ -1,17 +1,17 @@
-# ALICE PROJECT项目计划
+# A.L.I.C.E. PROJECT
 
-这个是一个娱乐性质的项目，受到以下两个的启发：
+This is an entertainment project, inspired by the following two:
 
 * Stanford PhD Candidate Joon's Generative AI HCI research
-* 日本动漫刀剑神域的Underworld中的Alice和压力测试的设定
+* Alice and stress test settings in Underworld of Japanese anime Sword Art Online
 
-该项目计划FEATURES如下：
+The project's planned FEATURES are as follows:
 
-* 2D版本的Underworld世界
-* 初始居民的设定
-* 玩家可以潜入其中的设定，并且玩家可以和居民对话，来“污染”居民的记忆和冲动
-* 地图中央是一个教会，是一个自上而下设定的管理者，管理当地居民的思维；当教会发现有人产生违反规定的想法时（发现必须是教会的警察在交互、巡逻中发现，教会也不能直接扫描其他居民的思维）
+* 2D version of Underworld
+* Initial residents settings
+* Players can sneak into the setting, and players can talk to residents to "pollute" residents' memories and impulses
+* In the center of the map is a church, a top-down manager, managing the thinking of local residents; when the church finds someone has an idea that violates the rules (the discovery must be made by the church's police during interaction and patrol, and the church cannot directly scan other residents' minds)
 
-该项目的目标如下：
+The goals of the project are as follows:
 
-* 压力测试：300年后魔界的怪物会入侵小镇，小镇居民和教会的目标是抵御魔界的进攻
+* Stress test: 300 years later, monsters from the demon world will invade the town, and the goal of the town residents and the church is to resist the attack of the demon world
